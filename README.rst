@@ -18,7 +18,23 @@ Since some software handling coverages sometime get slightly different results, 
 
 |coveralls| |sonar_coverage| |code_climate_coverage|
 
-Python package containing approximations of various NP problems.
+Available approximations
+--------------------------------------------------------------
+
+Knapsack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Knapsack is approximated usig a FPTAS.
+
+.. code:: python
+
+    from approximations import knapsack
+
+    total_weight, total_value, selected_objects = knapsack(
+        weights=[1,2,3,4, 1, 2, 2, 2, 2, 2],
+        values=[3,2,1,2,  1, 2, 2, 2, 2, 56],
+        capacity=20,
+        approximation=0.1
+    ) # (18, 72, [0, 1, 3, 4, 5, 6, 7, 8, 9])
 
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/approximations.png
