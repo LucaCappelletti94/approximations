@@ -39,7 +39,7 @@ Knapsack is approximated using a FPTAS, with arbitrarily good approximation. The
 
 Load Balancing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Load Balancing is approximated using a `greedy_sorted_balance`, achieving a 1.5-approximation.
+Load Balancing is approximated using a 1.5-approximation greedy algorithm.
 
 .. code:: python
 
@@ -47,6 +47,19 @@ Load Balancing is approximated using a `greedy_sorted_balance`, achieving a 1.5-
 
     assignment, makespans = load_balancing([1,2,3,4,5,6], 3) # ([[5, 0], [4, 1], [3, 2]], [7, 7, 7])
 
+Set Cover
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Load Balancing is approximated using a greedy algorithm.
+
+.. code:: python
+
+    from approximations image set_cover
+
+    cover = set_cover(
+        {1, 2, 3, 4, 5},
+        [{1, 2}, {3}, {1, 2, 3, 4}, {1, 3, 5}],
+        [1, 2, 3, 4]
+    ) # [0, 2, 3]
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/approximations.png
    :target: https://travis-ci.org/LucaCappelletti94/approximations

@@ -1,6 +1,8 @@
+"""Functions for handling greedy_sorted_balance approximation of Load Balancing."""
 from typing import List, Tuple
 import numpy as np
 
+__all__ = ["greedy_sorted_balance"]
 
 def greedy_sorted_balance(jobs: List[float], machines: int)->Tuple[List[int], List[float]]:
     r"""Return a tuple with assignment list and makespans list.
