@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+approximations/__init__.py
+approximations/__version__.py
+approximations/knapsack.py
+approximations/load_balancing.py
+approximations/set_cover.py
+approximations.egg-info/PKG-INFO
+approximations.egg-info/SOURCES.txt
+approximations.egg-info/dependency_links.txt
+approximations.egg-info/requires.txt
+approximations.egg-info/top_level.txt

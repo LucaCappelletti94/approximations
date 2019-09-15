@@ -4,6 +4,7 @@ import numpy as np
 
 __all__ = ["set_cover"]
 
+
 def coverage_weights(subsets: List[Set], weights: List[float], uncovered: Set) -> List[float]:
     r"""Return weights updated with the coverage score for each set.
 
@@ -12,16 +13,16 @@ def coverage_weights(subsets: List[Set], weights: List[float], uncovered: Set) -
     .. math::
 
        \frac{w_{i}}{S_{i} \cap \text{Uncovered}}
-       
+
     """
     for w, subset in zip(weights, subsets):
         intersection = len(subset.intersection(uncovered))
         yield (w/intersection if intersection else np.inf)
 
 
-def set_cover(full_set: Set, subsets: List[Set], weights: List[float])->List[int]:
+def set_cover(full_set: Set, subsets: List[Set], weights: List[float]) -> List[int]:
     r"""Return the an approximated minimum set cover for given sets.
-        
+
     Considering the Harmonic function:
 
     .. math::
@@ -41,7 +42,7 @@ def set_cover(full_set: Set, subsets: List[Set], weights: List[float])->List[int
 
     subsets:List[Set]
         List of subsets.
-    
+
     weights:List[float]
         Weights of the subsets in problem instance.
 
@@ -56,7 +57,7 @@ def set_cover(full_set: Set, subsets: List[Set], weights: List[float])->List[int
 
     ValueError
         If given subsets list contain only one set.
-    
+
     ValueError
         If given lengths of subsets and weights lists do not match.
 
@@ -64,7 +65,7 @@ def set_cover(full_set: Set, subsets: List[Set], weights: List[float])->List[int
 
     if not subsets:
         raise ValueError("Given subsets list is empty.")
-    if len(subsets)<2:
+    if len(subsets) < 2:
         raise ValueError("Given subsets list contains only one set.")
     if len(subsets) != len(weights):
         raise ValueError("Lengths of subsets and weights lists do not match.")
