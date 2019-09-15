@@ -23,7 +23,7 @@ Available approximations
 
 Knapsack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Knapsack is approximated using a FPTAS.
+Knapsack is approximated using a FPTAS, with arbitrarily good approximation. The computing cost increases up to becoming NP as the approximation approaches 0.
 
 .. code:: python
 
@@ -39,7 +39,7 @@ Knapsack is approximated using a FPTAS.
 
 Load Balancing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Load Balancing is approximated using a `greedy_sorted_balance`.
+Load Balancing is approximated using a `greedy_sorted_balance`, achieving a 1.5-approximation.
 
 .. code:: python
 
