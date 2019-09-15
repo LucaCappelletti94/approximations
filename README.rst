@@ -23,7 +23,7 @@ Available approximations
 
 Knapsack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Knapsack is approximated usig a FPTAS.
+Knapsack is approximated using a FPTAS.
 
 .. code:: python
 
@@ -35,6 +35,17 @@ Knapsack is approximated usig a FPTAS.
         capacity=20,
         approximation=0.1
     ) # (18, 72, [0, 1, 3, 4, 5, 6, 7, 8, 9])
+
+
+Load Balancing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Load Balancing is approximated using a `greedy_sorted_balance`.
+
+.. code:: python
+
+    from approximations import load_balancing
+
+    assignment, makespans = load_balancing([1,2,3,4,5,6], 3) # ([[5, 0], [4, 1], [3, 2]], [7, 7, 7])
 
 
 .. |travis| image:: https://travis-ci.org/LucaCappelletti94/approximations.png

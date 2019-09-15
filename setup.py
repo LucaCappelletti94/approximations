@@ -29,7 +29,7 @@ def find_version(*file_paths):
 
 __version__ = find_version("approximations", "__version__.py")
 
-test_deps =[
+test_deps = [
     "pytest",
     "pytest-cov",
     "coveralls",
@@ -61,7 +61,8 @@ setup(
     tests_require=test_deps,
     # Add here the package dependencies
     install_requires=[
-        "knapsack"
+        "knapsack",
+        "numpy"
     ],
     extras_require=extras,
 )
