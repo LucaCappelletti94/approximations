@@ -49,7 +49,7 @@ Load Balancing is approximated using a 1.5-approximation greedy algorithm.
 
 Set Cover
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Load Balancing is approximated using a greedy algorithm.
+Set Cover is approximated using a greedy algorithm.
 
 .. code:: python
 
